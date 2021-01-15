@@ -1,0 +1,13 @@
+name: Scientific Data Lab
+on: [push, pull_request]
+
+jobs:
+  actions:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Copia repositorio
+      uses: actions/checkout@v2
+    - name: Construye imagen
+      run: docker build --tag SDLab .
+    - name: revisa el estilo
+      run: docker run SDLab make check
