@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "eslint-plugin-html": "^6.1.1"
+  },
+  "standard": {
+    "globals": [ "L" ]
   }
 }
