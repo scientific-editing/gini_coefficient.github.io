@@ -8,6 +8,6 @@ jobs:
     - name: Copia repositorio
       uses: actions/checkout@v2
     - name: Construye imagen
-      run: docker build --tag SDLab .
+      run: docker build --tag sdlab .
     - name: revisa el estilo
-      run: docker run SDLab make check
+      run: docker run sdlab make check
