@@ -1,8 +1,11 @@
-.PHONY: check clean
+.PHONY: check clean format
 
 check:
-	yarn && npx standard --plugin html index.html
+	yarn && yarn standard --plugin html index.html
 
 clean: 
 	rm --force --recursive node_modules
 	rm --force *lock*
+
+format:
+	yarn && yarn standard --plugin html index.html --fix
